@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+  background:#ffc600;
+  font-family:'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+body {
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height:100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  background:#6B0F9C;
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+  color:white;
+  text-align: center;
+  align-items:center;
+  /* Safari transitionend event.propertyName === flex */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition:
+    font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+    background 0.2s;
+  font-size: 20px;
+  background-size:cover;
+  background-position:center;
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.panel1 { background-image:url(https://images.unsplash.com/photo-1500487003906-9baadc8d610d?dpr=1&auto=compress,format&fit=crop&w=1834&h=&q=80&cs=tinysrgb&crop=); }
+.panel2 { background-image:url(https://images.unsplash.com/photo-1496849951355-c5e5e9b168c9?dpr=1&auto=compress,format&fit=crop&w=1947&h=&q=80&cs=tinysrgb&crop=); }
+.panel3 { background-image:url(https://images.unsplash.com/photo-1502517362993-96fc441e4831?dpr=1&auto=compress,format&fit=crop&w=1950&h=&q=80&cs=tinysrgb&crop=); }
+.panel4 { background-image:url(https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=1&auto=compress,format&fit=crop&w=1050&h=&q=80&cs=tinysrgb&crop=); }
+.panel5 { background-image:url(https://images.unsplash.com/photo-1504975834417-7f8eeef7cc5a?dpr=1&auto=compress,format&fit=crop&w=1778&h=&q=80&cs=tinysrgb&crop=); }
+
+/* Flex Items */
+.panel > * {
+  margin:0;
+  width: 100%;
+  transition:transform 0.5s;
+  flex: 1 0 auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(100%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+.panel p {
+  text-transform: uppercase;
+  text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+.panel p:nth-child(2) {
+  font-size: 4em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size:40px;
+}
