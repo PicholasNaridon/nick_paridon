@@ -1,0 +1,28 @@
+<%= form_for (@work) do |f| %>
+<% if work.errors.any? %>
+ <div id="error_explanation">
+   <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+   <ul class="devise">
+     <% work.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+     <% end %>
+   </ul>
+ </div>
+ <% end %>
+
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+ <%= f.label :description %>
+ <%= f.text_area :description %>
+ <%= f.label :languages %>
+ <%= f.text_field :languages %>
+ <%= f.label :link %>
+ <%= f.text_field :link %>
+ <%= f.label :git %>
+ <%= f.text_field :git %>
+
+
+
+ <%= f.submit "Create work", class: "button expanded"%>
+<% end %>
