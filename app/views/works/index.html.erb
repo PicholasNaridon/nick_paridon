@@ -1,0 +1,8 @@
+<h1>My Portfolio</h1>
+<% @works.each do |work| %>
+<h1>
+  <%= link_to work.name, work_path(work) %>
+</h1>
+<% end %>
+
+<%= link_to "New Work", new_work_path %>
