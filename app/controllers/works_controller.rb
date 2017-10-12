@@ -14,7 +14,7 @@ class WorksController < ApplicationController
   def create
     @work = Work.new(work_params)
     if @work.save
-      flash[:notice] = "Deck created"
+      flash[:notice] = "Work created"
       redirect_to work_path(@work)
     else
       flash[:notice] = "Work not saved"
