@@ -8,6 +8,13 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'devise'
+gem 'simple_form'
+gem 'ckeditor', '~> 4.1'
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'carrierwave'
+gem 'mini_magick'
+
+
 
 group :development do
   gem 'listen', '~> 3.0.5'

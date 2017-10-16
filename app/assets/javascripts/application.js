@@ -12,4 +12,5 @@
 //
 //= require rails-ujs
 //= require welcome
+//= require ckeditor/init
 //= require_tree .

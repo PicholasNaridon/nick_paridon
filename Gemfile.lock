@@ -41,7 +41,12 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    autoprefixer-rails (7.1.5)
+      execjs
     bcrypt (3.1.11)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     capybara (2.15.1)
       addressable
@@ -50,6 +55,16 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.2.1)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
+    ckeditor (4.2.4)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.2)
     concurrent-ruby (1.0.5)
     coveralls (0.8.21)
@@ -97,6 +112,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_magick (4.8.0)
     mini_mime (0.1.4)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
@@ -184,6 +200,9 @@ GEM
     shoulda-context (1.2.2)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     simplecov (0.14.1)
       docile (~> 1.1.0)
       json (>= 1.8, < 3)
@@ -224,13 +243,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.5)
   capybara
+  carrierwave
+  ckeditor (~> 4.1)
   coveralls
   devise
   factory_girl_rails
   jquery-rails
   launchy
   listen (~> 3.0.5)
+  mini_magick
   pg (~> 0.18)
   pry-rails
   puma (~> 3.7)
@@ -239,6 +262,7 @@ DEPENDENCIES
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
   shoulda
+  simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
