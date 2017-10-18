@@ -243,7 +243,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.3.5)
+  bootstrap-sass (~> 3.3.6)
   capybara
   carrierwave
   ckeditor (~> 4.1)
@@ -260,7 +260,7 @@ DEPENDENCIES
   rails (~> 5.1.2)
   rails_12factor
   rspec-rails (~> 3.5)
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   shoulda
   simple_form
   spring
