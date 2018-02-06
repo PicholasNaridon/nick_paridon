@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  background:#ffc600;
   font-family:'helvetica neue';
   font-size: 20px;
   font-weight: 200;
@@ -10,6 +9,13 @@ body {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+.header {
+  position: absolute;
+  border: azure;
+  border-style: solid;
+  background: azure;  
 }
 
 .panels {

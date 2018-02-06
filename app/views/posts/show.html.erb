@@ -1,5 +1,15 @@
 <div class="col-sm-11 col-xs-12 blog-content">
-  <h2 class="text-center"><%= @post.title %></h2>
-  <h5 class="text-center"><%= @post.created_at.strftime('%b %d, %Y %I:%M') %></h5>
-  <div><%= raw(@post.body) %></div>
+  <h2 class="text-center">
+    <%= @post.title %>
+  </h2>
+  <h5 class="text-center">
+    <%= @post.created_at.strftime('%b %d, %Y %I:%M') %>
+  </h5>
+  <div>
+    <%= raw(@post.body) %>
+  </div>
+</div>
+<div class="col-sm-11 col-xs-12 blog-content">
+  <%= button_to "delete", {:controller => :posts,
+        :action => 'destroy', :id => @post.id }, :method => :delete %>
 </div>

@@ -38,9 +38,9 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  # The destroy action removes the post permanently from the database
   def destroy
-    if @post.destroy
+    @post = Post.find(params[:id])
+    if @post.delete
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
     else
